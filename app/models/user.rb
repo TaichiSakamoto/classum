@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
-end
+  validates :password, presence: true
 
-class User < ApplicationRecord
+  has_many :topics
+
   has_secure_password
 end
