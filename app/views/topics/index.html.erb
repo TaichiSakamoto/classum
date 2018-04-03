@@ -14,9 +14,19 @@
               <% end %>
             <% end %>
 
-            <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <%= link_to comments_path(topic_id: topic.id),method: :get do %>
+              <%= image_tag 'icons/comment.png', class: 'topic-index-icon'%>
+            <% end %>
             <p class="topic-text">
               <%= topic.description %>
+
+            <h1 class="comment-title">コメント</h1>
+            <% topic.comments.each do |comment| %>
+              <p class="comment-content">
+                <%= comment.content %>
+              </p>
+            <% end %>
+
             </p>
           </div>
         </div>
