@@ -13,15 +13,13 @@
                 <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
+
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <p class="topic-text">
               <%= topic.description %>
             </p>
           </div>
         </div>
-        <%= link_to 'トップページ', '/',class: 'btn btn-block btn-black' %>
-        <%= link_to '新規投稿', '/topics/new',class: 'btn btn-block btn-black' %>
-        <%= link_to 'お気に入り一覧', '/favorites',class: 'btn btn-block btn-black' %>
       </div>
     <% end %>
   </div>

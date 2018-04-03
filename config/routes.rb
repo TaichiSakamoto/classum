@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'favorites/index'
 
   get 'topics/new'
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'favorites/index'
 
   get 'topics/new'
@@ -28,6 +32,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'favorites/index'
 
   get 'topics/new'
@@ -41,6 +47,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'favorites/index'
 
   get 'topics/new'
@@ -56,6 +64,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'favorites/index'
 
   root 'pages#index'
@@ -70,6 +80,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'sessions/new'
 
   root 'pages#index'
@@ -86,6 +98,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
+  get 'comments/new'
+
   get 'favorites/index'
 
   get 'sessions/new'
