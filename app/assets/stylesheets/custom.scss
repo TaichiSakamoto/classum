@@ -1,5 +1,6 @@
 h1, h2 {
   font-weight: 100;
+  padding-left: 30px;
 }
 
 .text-white {
@@ -8,16 +9,25 @@ h1, h2 {
 
 .btn-white {
   color: #fff;
-  border: 1px solid #fff;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 20px;
+  font-size: 40px;
   background-color: rgba(0,0,0,0.0);
-
 
   &:hover {
     color: #fff;
   }
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 70px;
+}
+
+.col-md-3 {
+  padding-top: 100px;
+  padding-left: 150px;
 }
 
 .top-hero-wrapper {
@@ -43,25 +53,34 @@ h1, h2 {
   }
 }
 
-form-control {
-  height: 45px;
-}
+
+
 
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
   background-image: image-url('image/knowledge-1052010_1920.jpg');
-  background-position: center center;
+  background-position:center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
+
 
   .users-new-container {
     padding-top: 220px;
 
     .form-group {
       margin-bottom: 20px;
+      list-style: none;
+
+      .form-control {
+        height: 15px;
+        margin-left: 15px;
+        width: 200px;
+        float:none;
+
+      }
     }
   }
 }
@@ -127,11 +146,7 @@ form-control {
       padding-left: 20px;
     }
 
-    img {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 100%;
-    }
+
 
     .topic-index-icon {
       width: 35px;
@@ -161,4 +176,38 @@ form-control {
   font-size: 20px;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+
+.topic-show-wrapper {
+  padding-top: 70px;
+  background-color: #fafafa;
+  .topic-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .topic-time {
+      color: #8899a6;
+      margin-bottom: 10px;
+    }
+
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
 }

@@ -17,6 +17,10 @@ class TopicsController < ApplicationController
     @topics = Topic.all.includes(:favorite_users)
   end
 
+  def show
+    @topics = Topic.find_by(id: params[:id])
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:description)

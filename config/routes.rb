@@ -192,4 +192,6 @@ Rails.application.routes.draw do
   post '/comments',  to: 'comments#create'
   get  '/comments',  to: 'comments#new'
 
+  get 'topics/:id',  to: 'topics#show'
+
 end

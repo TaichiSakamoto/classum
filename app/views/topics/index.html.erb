@@ -10,7 +10,7 @@
 
             <% if !topic.favorite_users.include?(current_user) %>
               <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
-                <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
+                <%= image_tag 'icons/good-white.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
 
@@ -18,7 +18,7 @@
               <%= image_tag 'icons/comment.png', class: 'topic-index-icon'%>
             <% end %>
             <p class="topic-text">
-              <%= topic.description %>
+              <%= link_to(topic.description, "/topics/#{topic.id}" ) %>
 
             <h1 class="comment-title">コメント</h1>
             <% topic.comments.each do |comment| %>
