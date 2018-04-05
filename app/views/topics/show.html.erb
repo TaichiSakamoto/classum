@@ -9,6 +9,12 @@
           <div class="topic-time">
             <%= @topics.created_at %>
           </div>
+          <h1 class="comment-title">コメント</h1>
+          <% @topics.comments.each do |comment| %>
+            <p class="comment-content">
+              <%= comment.content %>
+            </p>
+          <% end %>
         </div>
       </div>
     </div>
