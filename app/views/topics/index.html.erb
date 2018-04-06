@@ -8,20 +8,26 @@
               <%= topic.user.name %>
             </h2>
 
-            <% if !topic.favorite_users.include?(current_user) %>
-              <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
-                <%= image_tag 'icons/good-white.png', class: 'topic-index-icon' %>
-              <% end %>
-            <% end %>
 
-            <%= link_to comments_path(topic_id: topic.id),method: :get do %>
-              <%= image_tag 'icons/comment.png', class: 'topic-index-icon'%>
-            <% end %>
+
             <p class="topic-text">
-              <%= link_to(topic.description, "/topics/#{topic.id}" ) %>
+              <div class="topic-description">
+                <%= link_to(topic.description, "/topics/#{topic.id}" ) %>
+              </div>
 
-            <h1 class="comment-title">コメント</h1>
-            <% topic.comments.each do |comment| %>
+              <% if !topic.favorite_users.include?(current_user) %>
+                <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+                  <%= image_tag 'icons/good-white.png', class: 'topic-index-icon' %>
+                <% end %>
+              <% end %>
+
+
+              <%= link_to comments_path(topic_id: topic.id),method: :get do %>
+                <%= image_tag 'icons/comment.png', class: 'topic-index-icon'%>
+              <% end %>
+
+              <h1 class="comment-title">コメント</h1>
+                <% topic.comments.each do |comment| %>
               <p class="comment-content">
                 <%= comment.content %>
               </p>
