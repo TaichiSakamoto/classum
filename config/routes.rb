@@ -194,6 +194,7 @@ Rails.application.routes.draw do
 
   get 'topics/:id',  to: 'topics#show'
   get 'topics/:id/edit', to: 'topics#edit'
-  post "topics/:id/update" => "topics#update"
+  post "topics/:id/update", to:  "topics#update"
+  post "topics/:id/destroy", to: "topics#destroy"
 
 end

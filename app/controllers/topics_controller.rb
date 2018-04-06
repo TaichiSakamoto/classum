@@ -32,6 +32,12 @@ class TopicsController < ApplicationController
     redirect_to("/topics")
   end
 
+  def destroy
+    @topic = Topic.find_by(id: params[:id])
+    @topic.destroy
+    redirect_to("/topics")
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:description)

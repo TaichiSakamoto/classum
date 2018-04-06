@@ -10,6 +10,7 @@
             <%= @topic.created_at %>
           </div>
           <%= link_to("編集", "/topics/#{@topic.id}/edit") %>
+          <%= link_to("削除", "/topics/#{@topic.id}/destroy", {method:"post"}) %>
           <h1 class="comment-title">コメント</h1>
           <% @topic.comments.each do |comment| %>
             <p class="comment-content">
