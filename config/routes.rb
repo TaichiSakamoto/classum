@@ -193,5 +193,7 @@ Rails.application.routes.draw do
   get  '/comments',  to: 'comments#new'
 
   get 'topics/:id',  to: 'topics#show'
+  get 'topics/:id/edit', to: 'topics#edit'
+  post "topics/:id/update" => "topics#update"
 
 end

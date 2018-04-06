@@ -18,7 +18,18 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topics = Topic.find_by(id: params[:id])
+    @topic = Topic.find_by(id: params[:id])
+  end
+
+  def edit
+    @topic = Topic.find_by(id: params[:id])
+  end
+
+  def update
+    @topic = Topic.find_by(id: params[:id])
+    @topic.description = params[:description]
+    @topic.save
+    redirect_to("/topics")
   end
 
   private
