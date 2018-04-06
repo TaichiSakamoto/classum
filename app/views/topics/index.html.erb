@@ -4,6 +4,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
+            <h1 class="topic-user-name">名前</h1>
             <h2 class="topic-author">
               <%= link_to(topic.user.name, "/users/#{topic.user.id}") %>
             </h2>
@@ -11,6 +12,7 @@
 
 
             <p class="topic-text">
+              <h1 class="topic-name">投稿内容</h1>
               <div class="topic-description">
                 <%= link_to(topic.description, "/topics/#{topic.id}" ) %>
               </div>
