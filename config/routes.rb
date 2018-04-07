@@ -201,5 +201,9 @@ Rails.application.routes.draw do
   get "users/:id/edit", to: "users#edit"
   post "users/:id/update" => "users#update"
 
+  post "comments/:id/destroy" => "comments#destroy"
+
+
+
 
 end

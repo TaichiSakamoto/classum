@@ -39,6 +39,7 @@ class TopicsController < ApplicationController
     redirect_to("/topics")
   end
 
+  
   private
   def topic_params
     params.require(:topic).permit(:description)

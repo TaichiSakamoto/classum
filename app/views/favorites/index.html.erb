@@ -12,7 +12,7 @@
             <p class="topic-text">
               <h1 class="topic-name">投稿内容</h1>
               <div class="topic-description">
-                <%= link_to(topic.description, "/topics/#{topic.id}" ) %>
+                <%= topic.description %>
               </div>
 
               <%= link_to comments_path(topic_id: topic.id),method: :get do %>
@@ -24,6 +24,7 @@
               <p class="comment-content">
                 <%=  comment.user.name %>
                 <%= comment.content %>
+                <%= link_to("削除", "/comments/#{comment.id}/destroy", {method: "post"}) %>
               </p>
             <% end %>
 

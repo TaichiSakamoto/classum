@@ -41,6 +41,7 @@
               <p class="comment-content">
                 <%=  comment.user.name + ":" %>
                 <%= comment.content %>
+                <%= link_to("削除", "/comments/#{comment.id}/destroy", {method: "post"}) %>
               </p>
             <% end %>
 
