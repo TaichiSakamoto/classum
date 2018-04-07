@@ -22,6 +22,7 @@
               <h1 class="comment-title">コメント</h1>
                 <% topic.comments.each do |comment| %>
               <p class="comment-content">
+                <%=  comment.user.name %>
                 <%= comment.content %>
               </p>
             <% end %>

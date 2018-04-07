@@ -19,15 +19,8 @@ h1, h2 {
   }
 }
 
-.flex{
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 70px;
-}
-
-.col-md-3 {
-  padding-top: 100px;
-  padding-left: 150px;
+.top-command {
+  display: flex;
 }
 
 .top-hero-wrapper {
@@ -44,7 +37,7 @@ h1, h2 {
 .top-hero-container {
   padding-top: 220px;
   h1 {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 20px;
   }
 

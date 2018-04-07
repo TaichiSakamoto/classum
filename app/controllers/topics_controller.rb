@@ -28,6 +28,7 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find_by(id: params[:id])
     @topic.description = params[:description]
+    @topic.title = params[:title]
     @topic.save
     redirect_to("/topics")
   end

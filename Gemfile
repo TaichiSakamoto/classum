@@ -60,5 +60,5 @@ group :development, :test do
   gem 'pry-stack_explorer'
 end
 
-gem 'bootstrap-sass'
-gem 'bcrypt'
+  gem 'bootstrap-sass'
+  gem 'bcrypt'
