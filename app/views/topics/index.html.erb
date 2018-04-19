@@ -1,5 +1,27 @@
 <div class="topic-index-wrapper">
   <div class="container">
+
+    <% provide(:title, '要約を探す') %>
+    <h1>要約を探す</h1>
+
+    <%= search_form_for @search  do |f| %>
+      <div class="form-group">
+        <%= f.label :title_cont, "Title" %>
+        <%= f.text_field :title_cont, class: "form-control" %>
+      </div>
+      <div class="btn btn-black btn-block"><%= f.submit "Search" %></div>
+    <% end %>
+
+    <% if @result.any? %>
+      <%= render @result %>
+    <% end %>
+
+    <% if @result.nil? %>
+      <ul class="topics">
+        <%= render @topics %>
+      </ul>
+    <% end %>
+
     <% @topics.each do |topic| %>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -49,6 +71,10 @@
           </div>
         </div>
       </div>
+
+
+
     <% end %>
+
   </div>
 </div>

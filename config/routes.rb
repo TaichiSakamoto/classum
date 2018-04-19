@@ -204,6 +204,4 @@ Rails.application.routes.draw do
   post "comments/:id/destroy" => "comments#destroy"
 
 
-
-
 end

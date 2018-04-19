@@ -15,6 +15,10 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all.includes(:favorite_users)
+
+    @search = Topic.ransack(params[:q])
+    @result = @search.result
+
   end
 
   def show
@@ -39,7 +43,9 @@ class TopicsController < ApplicationController
     redirect_to("/topics")
   end
 
-  
+
+
+
   private
   def topic_params
     params.require(:topic).permit(:description)
