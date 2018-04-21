@@ -1,2 +1,58 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @result.each do |topic| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
 
-      <%= render partial: "topics/index", object: @result  %>
+
+            <div class="topic-description">
+              <%= link_to(topic.title, "/topics/#{topic.id}" ) %>
+            </div>
+
+            <h1 class="topic-user-name">名前</h1>
+            <h2 class="topic-author">
+              <%= link_to(topic.user.name, "/users/#{topic.user.id}") %>
+            </h2>
+
+
+            <p class="topic-text">
+
+
+
+              <h1 class="topic-name">投稿内容</h1>
+              <div class="topic-description">
+                <%= topic.description %>
+              </div>
+
+              <% if !topic.favorite_users.include?(current_user) %>
+                <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+                  <%= image_tag 'icons/good-white.png', class: 'topic-index-icon' %>
+                <% end %>
+              <% end %>
+
+
+              <%= link_to comments_path(topic_id: topic.id),method: :get do %>
+                <%= image_tag 'icons/comment.png', class: 'topic-index-icon'%>
+              <% end %>
+
+              <h1 class="comment-title">コメント</h1>
+                <% topic.comments.each do |comment| %>
+              <p class="comment-content">
+                <%=  comment.user.name + ":" %>
+                <%= comment.content %>
+                <%= link_to("削除", "/comments/#{comment.id}/destroy", {method: "post"}) %>
+              </p>
+            <% end %>
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    <% end %>
+
+  </div>
+</div>

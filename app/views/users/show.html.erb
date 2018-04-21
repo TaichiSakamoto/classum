@@ -1,11 +1,13 @@
-<div class="user-show-wrapper">
-  <div class="container">
-    <div class="user">
-      <h2>Name</h2>
-        <%= @user.name %>
-      <h2>Email</h2>
-        <%= @user.email %>
+<div class="users-show-wrapper">
+  <div class="users-show-container">
+    <div class="user-information">
+      <h2 class="form-group">
+        Name: <%= @user.name %>
+      </h2>
+      <h2 class="form-group">
+        Email: <%= @user.email %>
+      </h2>
     </div>
-    <%= link_to("編集", "/users/#{@user.id}/edit") %>
+    <%= link_to("編集", "/users/#{@user.id}/edit", class: 'text-white') %>
   </div>
 </div>

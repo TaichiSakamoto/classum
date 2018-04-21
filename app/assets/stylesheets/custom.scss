@@ -25,7 +25,7 @@ h1, h2 {
 
 .top-hero-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-image: image-url('image/knowledge-1052010_1920.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ h1, h2 {
 }
 
 .top-hero-container {
-  padding-top: 220px;
+  padding-top: 300px;
   h1 {
     font-size: 45px;
     margin-bottom: 20px;
@@ -51,7 +51,7 @@ h1, h2 {
 
 .users-new-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-image: image-url('image/knowledge-1052010_1920.jpg');
   background-position:center center;
   background-repeat: no-repeat;
@@ -61,22 +61,87 @@ h1, h2 {
 
 
   .users-new-container {
-    padding-top: 220px;
+    padding-top: 80px;
 
     .form-group {
       margin-bottom: 20px;
       list-style: none;
+      padding-left: 60px;
 
       .form-control {
-        height: 15px;
+        height: 30px;
         margin-left: 15px;
         width: 200px;
         float:none;
 
+
+
       }
+    }
+    .sub-text {
+      margin-left: 120px;
+    }
+
+    .sessions-sub-text {
+      margin-left: 110px;
     }
   }
 }
+
+
+.users-edit-wrapper {
+  width: 100vw;
+  height: 90vh;
+  background-image: image-url('image/old-1130731_1280.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+
+  .users-edit-container {
+    padding-top: 80px;
+
+
+  }
+}
+
+.users-show-wrapper {
+  width: 100vw;
+  height: 90vh;
+  background-image: image-url('image/old-1130731_1280.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+
+  .users-show-container {
+    padding-top: 80px;
+
+    .user-information {
+      padding-top: 170px;
+      padding-left: 350px;
+
+
+      .form-group {
+        color: #fff;
+
+      }
+
+    }
+
+   .text-white {
+     color: #fff;
+     padding-left: 490px;
+     font-size: 20px;
+     
+   }
+  }
+}
+
 
 .alert {
   margin-bottom: 0px;
@@ -102,13 +167,19 @@ h1, h2 {
   }
 }
 
-.btn-black {
-  color: #565656;
-  border: 1px solid #565656;
+.btn-block {
+  border: 1px solid #fff;
   padding-top: 15px;
+  margin-top: 7px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   padding-bottom: 15px;
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
+
+
+
+
 
   &:hover {
     color: #565656;
@@ -116,37 +187,69 @@ h1, h2 {
 }
 
 .topic-new-wrapper {
+  width: 100vw;
+  height: 100vh;
   padding-top: 120px;
-}
+  background-image: image-url('image/literature-3327172_1280.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
 
-.topic-index-wrapper {
-  padding-top: 70px;
-  background-color: #fafafa;
-  .topic-index-single {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 30px;
-    border: 1px solid #e6ecf0;
-    border-radius: 3px;
-    .topic-author {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
+  .topics-new-container {
+    padding-top: 30px;
 
-    .topic-text {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
+    .form-group {
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
 
 
-
-    .topic-index-icon {
-      width: 35px;
-      height: 30px;
-      margin-left: 20px;
+      .form-control {
+        height: 30px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+        float:none;
+      }
     }
   }
+}
+
+  .topic-index-wrapper {
+    padding-top: 70px;
+    background-color: #fafafa;
+
+    .topic-index-single {
+      background-color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 30px;
+      border: 1px solid #e6ecf0;
+      border-radius: 3px;
+
+      .topic-author {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .topic-text {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+
+
+.topic-index-icon {
+  width: 35px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.text-center {
+  color: #fff;
 }
 
 .btn-black {
