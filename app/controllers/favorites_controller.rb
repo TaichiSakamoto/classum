@@ -12,6 +12,9 @@ class FavoritesController < ApplicationController
 
   def index
     @favorite_topics = current_user.favorite_topics
+
+    @search = Topic.ransack(params[:q])
+    @result = @search.result
   end
 
 
