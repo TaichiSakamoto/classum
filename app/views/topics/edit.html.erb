@@ -1,14 +1,14 @@
-<div class="topics-edit-wrapper">
-  <div class="container">
-    <h1 class="form-heading">編集する</h1>
+<div class="topic-edit-wrapper">
+  <div class="topic-show-container">
+    <h1 class="form-group-title">Edit</h1>
     <%= form_tag("/topics/#{@topic.id}/update") do %>
       <div class="form">
         <div class="form-body">
-          <h1 class="topic-name">教科名</h1>
-          <textarea name="title"><%= @topic.title %></textarea>
-          <h1 class="topic-name">投稿内容</h1>
-          <textarea name="description"><%= @topic.description %></textarea>
-          <input type="submit" value="保存">
+          <h1 class="topic-name">Subject</h1>
+          <textarea name="title" class="title-form"><%= @topic.title %></textarea>
+          <h1 class="topic-name">Content</h1>
+          <textarea name="description" class="description-form"><%= @topic.description %></textarea>
+          <input type="submit" value="保存" class="text-white">
         </div>
       </div>
     <% end %>

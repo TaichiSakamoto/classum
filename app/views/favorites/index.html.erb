@@ -1,16 +1,18 @@
 <div class="topic-index-wrapper">
-  <div class="container">
+  <div class="topic-index-container">
 
     <% provide(:title, '要約を探す') %>
-    <h1>要約を探す</h1>
+    <h1 class="search-title">
 
     <%= search_form_for @search  do |f| %>
       <div class="form-group">
-        <%= f.label :title_cont, "Title" %>
+        <%= f.label :title_cont, "要約を探す", class: "form-title" %>
         <%= f.text_field :title_cont, class: "form-control" %>
+
+      <div class="search-botton"><%= f.submit "検索" %></div>
       </div>
-      <div class="btn btn-black btn-block"><%= f.submit "Search" %></div>
     <% end %>
+    </h1>
 
     <% if @result.any? %>
       <%= render :partial => "result", :locals => { title: @result } %>

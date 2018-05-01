@@ -1,40 +1,35 @@
-<div class="topic-index-wrapper">
-  <div class="container">
+<div class="topic-result-wrapper">
+  <div class="topic-result-container">
     <% @result.each do |topic| %>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="topic-index-single">
-
+        <div class="col-md-12">
+          <div class="topic-result-single">
             <div class="topic-description">
-              <%= link_to(topic.title, "/topics/#{topic.id}" ) %>
+              <h1 class="topic-title-name">
+              授業名:
+              <%= link_to(topic.title, "/topics/#{topic.id}", class: "topic-title" ) %>
+              </h1>
+            <h1 class="topic-author-name">
+              記入者名:
+              <%= link_to(topic.user.name, "/users/#{topic.user.id}", class: "topic-author" ) %>
+            </h1>
             </div>
-
-            <h1 class="topic-user-name">名前</h1>
-            <h2 class="topic-author">
-              <%= link_to(topic.user.name, "/users/#{topic.user.id}") %>
-            </h2>
-
             <p class="topic-text">
-              <h1 class="topic-name">投稿内容</h1>
               <div class="topic-description">
                 <%= topic.description %>
               </div>
-
               <%= link_to comments_path(topic_id: topic.id),method: :get do %>
                 <%= image_tag 'icons/comment.png', class: 'topic-index-icon'%>
               <% end %>
-
               <h1 class="comment-title">コメント</h1>
                 <% topic.comments.each do |comment| %>
               <p class="comment-content">
-                <%=  comment.user.name %>
+                <%=  comment.user.name + ":" %>
                 <%= comment.content %>
-                <%= link_to("削除", "/comments/#{comment.id}/destroy", {method: "post"}) %>
+                <%= link_to("削除", "/comments/#{comment.id}/destroy", {method: "post", class: "delete-botton"}) %>
               </p>
             <% end %>
-
             </p>
-
           </div>
         </div>
       </div>

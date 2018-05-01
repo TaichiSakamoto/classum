@@ -35,7 +35,7 @@ h1, h2 {
 }
 
 .top-hero-container {
-  padding-top: 300px;
+  padding-top: 200px;
   h1 {
     font-size: 45px;
     margin-bottom: 20px;
@@ -101,11 +101,38 @@ h1, h2 {
 
 
   .users-edit-container {
-    padding-top: 80px;
+    padding-top: 130px;
+
+    .form-heading {
+      padding-left: 400px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .form-body {
+      padding-left: 400px;
+      color: #000;
+
+      .user-form {
+        height: 30px;
+      }
 
 
+      .form-name {
+        color: #fff;
+        padding-top: 20px;
+      }
+
+      .user-save{
+        font-size: 20px;
+        display: block;
+        margin-top: 20px;
+        margin-left: 50px;
+      }
+    }
   }
 }
+
 
 .users-show-wrapper {
   width: 100vw;
@@ -137,7 +164,7 @@ h1, h2 {
      color: #fff;
      padding-left: 490px;
      font-size: 20px;
-     
+
    }
   }
 }
@@ -188,7 +215,7 @@ h1, h2 {
 
 .topic-new-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   padding-top: 120px;
   background-image: image-url('image/literature-3327172_1280.jpg');
   background-position:center center;
@@ -198,7 +225,6 @@ h1, h2 {
   background-color: #464646;
 
   .topics-new-container {
-    padding-top: 30px;
 
     .form-group {
       color: #fff;
@@ -206,39 +232,147 @@ h1, h2 {
       padding-bottom: 20px;
 
 
-      .form-control {
+
+      .title-form-control {
         height: 30px;
+        width: 500px;
         margin-left: 15px;
         margin-bottom: 30px;
-        float:none;
+        border: 1px solid #e6ecf0;
+        border-radius: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #000;
+      }
+
+      .description-form-control {
+        height: 100px;
+        width: 500px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+        border: 1px solid #e6ecf0;
+        border-radius: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #000;
       }
     }
   }
 }
 
-  .topic-index-wrapper {
-    padding-top: 70px;
+.topic-index-wrapper {
+  padding-top: 10px;
+  background-color: #fafafa;
+
+  .topic-index-container {
     background-color: #fafafa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
 
-    .topic-index-single {
-      background-color: #fff;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      margin-top: 30px;
-      border: 1px solid #e6ecf0;
-      border-radius: 3px;
+    .search-title {
+      font-size: 20px;
+      display: block;
+    }
 
-      .topic-author {
-        padding-right: 20px;
-        padding-left: 20px;
-      }
+    .form-group {
+      padding-left: 100px;
+      display: flex;
+    }
 
-      .topic-text {
-        padding-right: 20px;
-        padding-left: 20px;
-      }
+    .form-title {
+      margin-top: 4px;
+    }
+
+    .form-control {
+      margin-left: 20px;
+      padding-left: 20px;
+      width: 500px;
+    }
+
+    .search-botton {
+      font-size: 20px;
+      margin-top: 4px;
+      margin-left: 20px;
     }
   }
+}
+
+
+.topic-result-wrapper {
+  padding-top: 10px;
+  background-color: #fafafa;
+
+  .topic-result-container {
+    background-color: #fafafa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+
+    .topic-result-single {
+      background-color: #fff;
+      border: 1px solid #e6ecf0;
+      border-radius: 3px;
+      margin-bottom: 10px;
+
+
+      .topic-description {
+        display: flex;
+
+        .topic-title-name {
+          font-size: 30px;
+
+          .topic-title {
+            color: #555;
+
+          }
+        }
+
+        .topic-author-name {
+          font-size: 20px;
+          padding-top: 10px;
+          padding-left: 100px;
+
+        }
+        .topic-author {
+          color: #555;
+
+        }
+      }
+        .topic-text {
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .topic-description {
+
+          }
+        }
+        .topic-index-icon {
+          margin-left: 40px;
+
+        }
+        .comment-title {
+          font-size: 20px;
+          padding-left: 50px;
+
+        }
+        .comment-content {
+          font-size: 15px;
+          padding-left: 30px;
+
+          .delete-botton {
+            font-size: 15px;
+            color: #555;
+            padding-left: 20px;
+
+          }
+        }
+
+    }
+  }
+}
 
 
 
@@ -276,38 +410,141 @@ h1, h2 {
 
 
 .topic-show-wrapper {
-  padding-top: 70px;
-  background-color: #fafafa;
-  .topic-index-single {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 30px;
-    border: 1px solid #e6ecf0;
-    border-radius: 3px;
-    .topic-author {
-      padding-right: 20px;
-      padding-left: 20px;
+  width: 100vw;
+  height: 90vh;
+  padding-top: 120px;
+  background-image: image-url('image/literature-3327172_1280.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .topic-show-container {
+    padding-top: 30px;
+
+
+    .form-group-title {
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 82px;
     }
 
-    .topic-text {
-
-      padding-right: 20px;
-      padding-left: 20px;
+    .form-group-content {
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .topic-time {
-      color: #8899a6;
-      margin-bottom: 10px;
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      padding-left: 300px;
     }
 
-    .topic-index-icon {
-      width: 35px;
-      height: 30px;
-      margin-left: 20px;
+    .text-white {
+      color: #fff;
+      padding-left: 130px;
+      font-size: 20px;
+      display: inline;
     }
   }
 }
+
+
+.topic-edit-wrapper {
+  width: 100vw;
+  height: 90vh;
+  padding-top: 120px;
+  background-image: image-url('image/literature-3327172_1280.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .topic-show-container {
+
+
+    .form-group-title {
+      color: #fff;
+      padding-bottom: 20px;
+      padding-left: 470px;
+    }
+
+    .form-body {
+      color: #000;
+      padding-bottom: 20px;
+
+      .topic-name {
+        color: #fff;
+        padding-left: 250px;
+      }
+
+      .title-form {
+        height: 30px;
+        width: auto;
+        margin-left: 250px;
+      }
+
+      .description-form {
+        height: 100px;
+        width: 500px;
+        margin-left: 250px;
+        margin-bottom: 20px;
+      }
+
+      .text-white {
+        color: #000;
+        margin-left: 470px;
+        font-size: 20px;
+        display: block;
+      }
+    }
+  }
+}
+
+.comment-new-wrapper {
+  width: 100vw;
+  height: 90vh;
+  padding-top: 120px;
+  background-image: image-url('image/literature-3327172_1280.jpg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .comment-new-container {
+    padding-top: 30px;
+
+
+
+    .form-group {
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+
+      .form-control {
+        height: 30px;
+        margin-left: 25px;
+        margin-bottom: 30px;
+        float:none;
+      }
+
+
+    }
+    .comment-action {
+      font-size: 20px;
+      color: #000;
+      margin-left: 200px;
+    }
+  }
+}
+
 
 .topic-description {
   font-size: 30px;
